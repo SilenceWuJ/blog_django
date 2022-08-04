@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的第⼀个Django Web项⽬</title>
+    <!--最新版本的 Bootstrap 核⼼ CSS ⽂件-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg
+    32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--最新的 Bootstrap 核⼼ JavaScript ⽂件-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mC
+    WNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container page-header">
+    <h1>{{ curr_article.title }}
+    </h1>
+    </div>
+    <div class="container body-main">
+    <div>
+        <p>
+        {{ curr_article.content }}
+        </p>
+    </div>
+    <div>
+    <nav aria-label="...">
+    <ul class="pager">
+    <li><a href="/blog/detail/{{ p_article.article_id }}">上⼀篇:{{ p_article.title }}</a></li>
+    <li><a href="/blog/detail/{{ n_article.article_id }}">下⼀篇:{{ n_article.title }}</a></li>
+    </ul>
+    </nav>
+    </div>
+    </div>
+</body>
+</html>
